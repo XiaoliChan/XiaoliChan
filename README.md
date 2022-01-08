@@ -11,5 +11,5 @@
 
 - ⚡ Fun fact: I'm home lab player.
 
-- <img src="https://app.hackthebox.com/images/HTB-favicon/favicon.ico" width=23 heigh=23 /> HackTheBox:  
+- <img src="https://app.hackthebox.com/images/HTB-favicon/favicon.ico" width=23 heigh=23 /> HackTheBox badge:  
   ![Arrexel](https://www.hackthebox.com/badge/image/51959)
