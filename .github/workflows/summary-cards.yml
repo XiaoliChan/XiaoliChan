@@ -1,0 +1,26 @@
+name: Generate summary cards
+
+# Renders profile stats SVGs INTO this repo (profile-summary-card-output/) so
+# the README has zero third-party image dependencies (vercel.app-based card
+# services are unreachable for many viewers, e.g. mainland China).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 5 1 * *" # refresh monthly
+
+permissions:
+  contents: write
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: XiaoliChan
